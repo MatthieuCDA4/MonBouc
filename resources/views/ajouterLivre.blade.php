@@ -16,7 +16,7 @@
     <div id="wrapperMain">
         <div id="form">
             <h1>Page de création de la fiche livre</h1>
-            <form action=" {{ route('ficheLivre')}} " method="GET">
+            <form action=" {{ route('ficheLivre')}} " method="POST">
                 @csrf
                 <div>
                     <div class="rowForm">
