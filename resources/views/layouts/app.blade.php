@@ -31,7 +31,7 @@
                             <a href="{{route('pageDeRecherche')}}">| Rechercher un livre</a>
                             <a href="{{route('ficheLivre')}}">| Ajouter un livre</a> 
                             <div >                      
-                                    <form action=" {{ route('logout')}} " method="POST" class="deco">
+                                    <form action=" {{ route('logout')}} " method="POST" class="deco"  onclick="return ConfirmDelete();">
                                         @csrf
                                         <input type="submit" value="| Déconnexion" class="deconnexion">
                                     </form>
