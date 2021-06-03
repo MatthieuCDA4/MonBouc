@@ -82,8 +82,8 @@
                             <input class="voirDetail" type="submit" value="Voir détail">
                         </form>
 
-                    </div>     
-
+                    </div>   
+                      
                 @endforeach
             </div>
         @endif

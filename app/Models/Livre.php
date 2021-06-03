@@ -86,7 +86,7 @@ class Livre extends Model
 
     public function loginRechercheLivre($ville)
     {
-        return DB::select('SELECT * FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND ville = (?)', [$ville]); 
+        return DB::select('SELECT DISTINCT image FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND ville = (?)', [$ville]); 
     }
 
     public function detailLivre($idExemplaire, $pseudo)

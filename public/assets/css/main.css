@@ -85,7 +85,7 @@ html {
     align-items: center;
     text-align: right;
     margin-right: 20px;
-    justify-content: right;
+    justify-self:right;
 }
 
 .wrapperHeader .soldeJeton 
@@ -674,19 +674,16 @@ form p
         text-align: center;
     }
 
-
-
-
-
-}
-@media screen and (max-width: 1360px)
-{
     #wrapperMain
-    {
-        grid-template-columns: 1fr 1fr;
+        {
+            grid-template-columns: 1fr 1fr;
 
-    }
+        }
+
+
+
 }
+
 @media screen and (max-width: 762px)
 
 {
@@ -722,6 +719,17 @@ form p
     {
         margin-left: -40px
     }
+
+    #wrapperMainDetail
+    {
+        grid-template-columns: none;
+    }
+
+    #wrapperMainDetail #detailBox
+    {
+        grid-template-columns: none;
+    }
+
 
 }
 
@@ -763,5 +771,7 @@ form p
     {
         width: 360px;
     }
+
+
 }
 /*#endregion responsive*/
