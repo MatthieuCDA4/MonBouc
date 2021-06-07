@@ -1,0 +1,777 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    overflow-x: hidden;
+
+
+
+
+/*color*/
+--a--color--wrapperheader:rgb(125, 157, 51);
+--wrapperHeader--description--background-color: rgba(128, 128, 128, 0.239);
+--a--background:rgb(196, 218, 75);
+--etailBox--border: rgba(128, 128, 128, 0.671);
+--wrapperFooter--background:rgb(230, 242, 254);
+--wrapperFooter--a--color: black;
+--fondBoxLivre--background-color:rgba(146, 123, 123, 0.596);
+
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+
+/*#region tête de page*/
+
+.wrapperHeader
+{   
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+}
+
+
+.wrapperHeader .one 
+{   
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wrapperHeader .one img
+{
+    width: 100px;
+    margin-left: 5%;
+}
+
+.wrapperHeader .one h1
+{
+    margin-left: 20px;
+    font-family: 'Rock Salt', monospace;
+    
+}
+
+.wrapperHeader .two
+{   
+    display: grid;
+    grid-template-rows: 57% 20% 30%;
+    grid-gap: 10px;
+    grid-auto-columns: minmax(100px, auto);
+  
+    align-items: center;
+    justify-items: center;
+}
+.href
+{
+    display: flex;
+    flex-direction: row;
+
+}
+ .href a
+{   
+    text-decoration: none;
+    color: var(--a--color--wrapperheader);
+    font-size: 1em;
+}
+
+
+.wrapperHeader .tree  
+{   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: right;
+    margin-right: 20px;
+    justify-self:right;
+}
+
+.wrapperHeader .soldeJeton 
+{
+    display: flex;
+    flex-direction: row;
+}
+.wrapperHeader .tree img
+{
+    width: 50px;
+}
+
+.four
+{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 420px;
+}
+
+.wrapperHeader .four #fond img
+{
+    position: absolute;
+    z-index: -1;
+    height: 420px;
+    width: 100%;
+    border: solid thin;
+}
+
+#bandeau
+{
+    width: 100%;
+    height: 420px;
+}
+
+
+.wrapperHeader .four 
+{
+    grid-column-start: span 3;
+}
+
+.wrapperHeader .four #fondGoat img
+{
+    position: absolute;
+    right: 0px;
+    margin-top: 182px;
+}
+
+.wrapperHeader .four #description
+{
+    background-color: var(--wrapperHeader--description--background-color);
+    height: 200px;
+    width: 482px;
+    text-align: left;
+    margin-top:6%;
+    margin-bottom: 6%;
+    margin-left: 3%;
+
+}
+
+.deconnexion 
+{
+    border-style: none;
+    background: none;
+    color: var(--a--color--wrapperheader);
+}
+
+.wrapperHeader .four #box h4
+{
+    text-align: center;
+
+}
+/*#endregion tête de page*/
+
+/*#region index*/
+
+main
+{
+    display: grid;
+    grid-template-rows: auto;
+}
+#boutonValider
+{
+    text-align: center;
+    margin-right: -1%;
+    border-radius: 5%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+#boutonValider #texte
+{
+    width: 20%;
+}
+#wrapperMain
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 5%;
+}
+.box
+{
+    display: grid; 
+    margin: 5%;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+
+}
+
+.box img
+{ 
+    display: block;
+    width: 180px;
+    height: 260px;
+
+}
+
+
+.box  .voirDetail
+{
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--a--background);
+    border-radius: 10%;
+    border: solid thin;
+    grid-column-start: 2;
+}
+
+.box  form
+{
+    grid-column-start: 2;
+}
+
+.box p
+{
+    margin-left: 20px;
+    text-align: left;
+
+}
+/*#endregion index*/
+
+/*#region recherche livre*/
+
+#wrapperMain #motClef 
+{
+    text-align: center;
+}
+
+#wrapperMain #motClef #barreRecherche
+{
+    width: 40%;
+}
+
+fieldset
+{
+    margin: 3%;
+}
+legend
+{
+    width: 100%;
+    text-align: center;
+    background: var(--a--background);
+}
+
+#recherche
+{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.padDeLivre
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.padDeLivre a
+{
+    text-align: center;
+}
+/*#endregion recherche livre*/
+
+/*#region ajouter livre*/
+
+main
+{
+    display: grid;
+    grid-template-rows: auto;
+}
+
+#wrapperMain  #form h1
+{
+    text-align: center;
+}
+#form
+{
+    grid-column-start: 2;
+    margin-bottom: 30px;
+}
+
+.rowForm{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+    height: 65px;
+}
+.rowForm .bouton
+{
+    border-radius: 10%;
+    margin: 10px; 
+}
+
+.rowForm textarea
+{
+    margin-top: 15%;
+    resize: none;
+}
+
+.rowFormEnvoie
+{
+ text-align: center;
+ margin-left: 40%;
+ margin-top: 14%;
+}
+
+form p
+{
+    font-size: 0.7em;
+    margin-left: 45%;
+}
+
+
+
+
+/*#endregion Rajouter livre*/
+
+/*#region activité*/
+
+#mainActivite
+{
+    display: grid;
+    grid-template-rows: auto;
+}
+
+#wrapperMainActivite
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 10px;
+}
+
+.detailActivite
+{
+    width: 50%;
+    height: 40%;
+    grid-column-start: span 3;
+    margin: 10%;
+    justify-self: center;
+}
+
+
+
+/*#endregion activité*/
+
+/*#region détail livre*/
+
+
+#detailBox
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 1fr 1.5fr;
+    border: solid thin var(--etailBox--border);
+    grid-column-start: 2;
+    margin-bottom: 5%;
+}
+
+#wrapperMainDetail
+{
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 1fr;
+    margin-left: 5%;
+}
+
+.titreDetail
+{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    text-align: center; 
+}
+
+#image
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ #image div
+{
+    align-self: center;
+    margin: 7%;
+}
+
+ #image img
+{
+    width: 150px;
+    height: 300px;
+}
+
+ #detail
+{
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    margin-bottom: 26%;
+    justify-self: center;
+    align-self: center;
+}
+
+#lien
+{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    align-self: center;
+}
+#lien div
+{
+    margin: 5%;
+}
+
+#lien .boutonCommentaire, .boutonEmprunt
+{
+    text-align: center;
+    text-decoration: none;
+    background: var(--a--background);
+    border-radius: 10%;
+    border: solid thin;
+    margin-top: 5px;
+    
+}
+
+#description
+{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start:4;
+    grid-row-end: 4;
+}
+
+#commentaire
+{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start:5;
+    grid-row-end: 5;
+}
+
+/*#endregion détail livre*/
+
+/*#region partie non fini*/
+
+#boiteImage
+{
+    display: grid;
+    grid-template-columns:  1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+#panneau
+{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: center;
+}
+#animation
+{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/*#endregion partie non fini*/
+
+/*#region pied de page*/
+.wrapperFooter
+{
+    background: var(--wrapperFooter--background);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.wrapperFooter .lien
+{
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+
+.wrapperFooter #createur
+{
+    background: var(--a--background);
+    text-align: center;
+    height: 100%;
+    bottom: 0%;
+    grid-column-start: span 3;
+}
+.wrapperFooter a
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--wrapperFooter--a--color);
+}
+
+.wrapperFooter .lien img
+{
+    position: relatives;
+    height: 10%;
+}
+/*#endregion pied de page*/
+
+/*#region Login*/
+
+#corp
+{
+    position: relative;  
+}
+
+#fondLogin
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* L'image est positionnée en haut à gauche */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#logo h1
+{
+    font-family: 'Rock Salt', cursive;
+    font-size: 70px;
+}
+
+.wrapperCenter
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#logo
+{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+
+}
+
+#logo img
+{
+    width: 150px;
+}
+
+.fondBoxLivre
+{
+    position: relative;
+    background-color: var(--fondBoxLivre--background-color);
+    height: 300px;
+    width: 98%;
+    bottom:-90px;
+    left: 18px;
+    
+}
+
+.piedPage ul li 
+{
+    
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    justify-content: center;
+    margin: 1%;
+    
+}
+
+.piedPage ul li img 
+{
+    
+    margin-left: 50px;
+    
+}
+
+.rowForm
+{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+    height: 35px;
+}
+
+.rowForm .bouton
+{
+    border-radius: 10%;
+    margin: 10px;  
+}
+
+.boutonConnexionLogin 
+{
+    margin-left: 13%;
+}
+
+.fondBoxLivre .piedPage .wrapperFooterLogin 
+{
+    margin: 1%;
+
+}
+.boutonInscriptionLogin
+{
+    margin-left: 51%;
+    margin-top: -7%;
+    width: 200px;
+    height: 35px;
+}
+
+.boutonRegister
+{
+    margin-left: 45%;
+    margin-top: 2%;
+}
+
+/*#endregion Login*/
+
+/*#region Emprunt*/
+
+.detailActivite fieldset
+{
+    text-align: center;
+}
+
+.imageEmprunt
+{
+    grid-column-start: 3;
+}
+
+.imageEmprunt img
+{
+    margin-top: -145px;
+}
+.empruntPasJeton
+{
+    text-align: center;
+}
+
+
+/*#endregion Emprunt*/
+
+/*#region resposive*/
+@media screen and (max-width: 1360px)
+
+{
+    
+    .href
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #wrapperMain
+        {
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+
+
+}
+
+@media screen and (max-width: 762px)
+
+{
+    .wrapperHeader
+    {
+        display: block;
+    }
+
+    .one 
+    {
+        justify-content: center;
+    }
+    .tree
+    {
+
+        justify-content: center;
+    }
+
+    #wrapperMain
+    {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-left: 5%;
+    }
+
+    .box
+    {
+        margin-bottom: 5%;
+        
+    }
+    .box .voirDetail
+    {
+        margin-left: -40px
+    }
+
+    #wrapperMainDetail
+    {
+        grid-template-columns: none;
+    }
+
+    #wrapperMainDetail #detailBox
+    {
+        grid-template-columns: none;
+    }
+
+
+}
+
+@media screen and (max-width: 376px) 
+{
+    .wrapperHeader .four #description 
+    {
+        width: 280px;
+        height: 50%;
+    }
+
+    #wrapperMain
+    {
+        margin-left: 5px;
+        grid-template-rows: none;
+
+    }
+
+    .wrapperFooter
+    {
+        text-align: center;
+    }
+
+    .detailActivite 
+    {
+        width:unset;
+        height: unset;
+        margin: unset;
+    }
+
+    #detailBox 
+    {
+
+        grid-template-columns: none;
+        grid-template-rows: none;
+  
+    }
+
+    .empruntPasJeton img
+    {
+        width: 360px;
+    }
+
+}
+/*#endregion responsive*/
