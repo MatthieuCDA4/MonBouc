@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
         <script language="javascript" src=" {{ asset('assets/js/javascript.js')}} " defer></script>
         <link rel="stylesheet" href="{{asset('/assets/css/normalize.css')}}">
-        <link rel="stylesheet" href="{{asset('/assets/css/main.css')}}">
+        <link rel="stylesheet" href="{{asset('/assets/css/app.min.css')}}">
         <link rel="shortcut icon" type="image/x-icon" href="{{asset('/assets/img/logoMonBouc.png')}}" />
         <!-- CSRF Token -->
         {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
