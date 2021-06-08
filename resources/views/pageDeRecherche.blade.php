@@ -8,39 +8,39 @@
             <div class="rechercher">
                 <form action=" {{ route('rechercheLivre') }} " method="POST">
                     @csrf
-                    <div id="auteur">
-                        <fieldset>
-                            <legend class="legend"> Auteur</legend>
+                    <fieldset>
+                        <legend class="legend"> Auteur</legend>
+                        <div id="auteur">
 
                             @foreach ($listeAuteur as $item)
                             <input type="radio" id="{{$item->id_auteur}}" name="check" value="{{$item->id_auteur}}" />
                             <label for="{{$item->id_auteur}}">{{$item->prenom_a}} {{$item->nom_a}} </label><br />
                             @endforeach
-                        </fieldset>
-                    </div>
+                        </div>
+                    </fieldset>
 
-                    <div id="categorie">
-                        <fieldset>
-                            <legend class="legend">Catégorie</legend>
+                    <fieldset>
+                        <legend class="legend">Catégorie</legend>
+                        <div id="categorie">
 
                             @foreach ($listeGenre as $item)
                                 <input type="radio" id="{{$item->nom_genre}}" name="check" value="{{$item->nom_genre}}" />
                                 <label for="{{$item->nom_genre}}">{{$item->nom_genre}}</label><br />
                             @endforeach
+                        </div>
                             
-                        </fieldset>
-                    </div>
+                    </fieldset>
 
-                    <div id="etat">
-                        <fieldset>
-                            <legend class="legend">Etats</legend>
+                    <fieldset>
+                        <legend class="legend">Etats</legend>
+                        <div id="etat">
                             @foreach ($listeEtat as $item)
                                 <input type="radio" id="{{$item->integrite_du_livre}}" name="check" value="{{$item->integrite_du_livre}}" />
                                 <label for="{{$item->integrite_du_livre}}">{{$item->integrite_du_livre}}</label><br />
                                 
                             @endforeach
-                        </fieldset>
-                    </div>
+                        </div>
+                    </fieldset>
                     <div id="recherche">
                         <input type="submit" value="Rechercher">
                     </div>

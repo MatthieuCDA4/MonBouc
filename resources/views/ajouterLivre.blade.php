@@ -98,7 +98,7 @@
                     </div>
                     
                     <div class="rowFormEnvoie">
-                        <input class="boutonEnvoie" type="submit" value="Envoyer">
+                        <input class="boutonEnvoie" type="submit" value="Envoyer" >
                         
                     </div>
                 </div> 
