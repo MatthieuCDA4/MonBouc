@@ -44,12 +44,4 @@ function ConfirmDelete()
     return false;
 }
 
-function ConfirmDelete()
-{
-  var x = confirm("Etes-vous sûr de vouloir envoyer ce livre?");
-  if (x)
-      return true;
-  else
-    return false;
-}
 
