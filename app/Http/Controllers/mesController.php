@@ -90,7 +90,6 @@ class MesController extends Controller
         $listeAuteur = $db->listeAuteur();
         $listeIsbn = $db->listeIsbn();
         $rechercheDispo =$db->rechercheLivreDisponible($recherche);
-        // dd($request);
         return view('pageDeRecherche')->with('title', $titre)
                                       ->with('dispo', $rechercheDispo)
                                       ->with('listeGenre', $listeGenre)

@@ -33,15 +33,15 @@ class Livre extends Model
 
         if ( is_numeric($recherche)) 
         {
-            return  DB::select('SELECT DISTINCT * FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND id_auteur IN (?) ', [$recherche]);
+            return  DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn  FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND id_auteur IN (?) ', [$recherche]);
         }
         elseif ($recherche == 'bon' || $recherche == "tres bon" || $recherche == 'moyen' || $recherche == 'mauvais') 
         {
-            return  DB::select('SELECT DISTINCT * FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND integrite_du_livre IN (?) ', [$recherche]); 
+            return  DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn  FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND integrite_du_livre IN (?) ', [$recherche]); 
         }
         else 
         {      
-            return  DB::select('SELECT DISTINCT * FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND nom_genre IN (?) ', [$recherche]);      
+            return  DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn  FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND nom_genre IN (?) ', [$recherche]);      
         }
         
     }

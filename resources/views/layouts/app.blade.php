@@ -7,7 +7,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
         <script language="javascript" src=" {{ asset('assets/js/javascript.js')}} " defer></script>
-        <link rel="stylesheet" href="{{asset('/assets/css/normalize.css')}}">
         <link rel="stylesheet" href="{{asset('/assets/css/app.min.css')}}">
         <link rel="shortcut icon" type="image/x-icon" href="{{asset('/assets/img/logoMonBouc.png')}}" />
         <!-- CSRF Token -->
@@ -20,12 +19,12 @@
                 <div class="wrapperHeader">
                     <div class="one">
                         <img src="{{asset('/assets/img/logoMonBouc.png')}} " alt="">
-                        <h1>Mon Bouc</h1>
+                        <h1 id="title">Mon Bouc</h1>
                     </div>
                     <div class="two">
                         
                         <h5>Bonjour " {{ auth()->user()->firstname }} " </h5>
-                        <div class="href">
+                        <div class="lienPage">
                             <a href="{{route('home')}}">| Accueil</a>
                             <a href="{{route('activite')}}">| Actvité</a>
                             <a href="{{route('pageDeRecherche')}}">| Rechercher un livre</a>

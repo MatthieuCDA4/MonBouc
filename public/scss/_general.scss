@@ -64,13 +64,13 @@ html {
     align-items: center;
     justify-items: center;
 }
-.href
+.lienPage
 {
     display: flex;
     flex-direction: row;
 
 }
- .href a
+ .lienPage a
 {   
     text-decoration: none;
     color: var(--a--color--wrapperheader);
@@ -88,11 +88,12 @@ html {
     justify-self:right;
 }
 
-.wrapperHeader .soldeJeton 
+.wrapperHeader .soldeJeton
 {
     display: flex;
     flex-direction: row;
 }
+
 .wrapperHeader .tree img
 {
     width: 50px;

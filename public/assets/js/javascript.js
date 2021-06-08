@@ -37,7 +37,7 @@ function afficheVille(tabVille)
 
 function ConfirmDelete()
 {
-  var x = confirm("Are you sure you want to delete?");
+  var x = confirm("Voulez-vous quitter mon Bouc?");
   if (x)
       return true;
   else
