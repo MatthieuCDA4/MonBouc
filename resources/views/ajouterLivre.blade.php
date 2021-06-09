@@ -84,6 +84,7 @@
                     <div class="rowForm">
                         <label for="imageCouverture">Image de couverture :</label>
                         <input id="imageCouverture" type="text" name="image" placeholder="Exemple.png">
+                        <a href="https://isbndb.com/" target="_blank" > lien couverture de livre</a>
                     </div>
                     
                     <div class="rowForm">

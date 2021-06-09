@@ -17,12 +17,12 @@ class Livre extends Model
         
         if ($recherche == false || $recherche == null ) 
         {
-            return DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn FROM livreDispo WHERE integrite_du_livre <> "Detruit"'); 
+            return DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn FROM livredispo WHERE integrite_du_livre <> "Detruit"'); 
            
         }
         else
         {
-            return DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND isbn = (?) ', [$recherche]); 
+            return DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre FROM livredispo WHERE integrite_du_livre <> "Detruit" AND isbn = (?) ', [$recherche]); 
         }
     }
 
@@ -33,15 +33,15 @@ class Livre extends Model
 
         if ( is_numeric($recherche)) 
         {
-            return  DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn  FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND id_auteur IN (?) ', [$recherche]);
+            return  DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn  FROM livredispo WHERE integrite_du_livre <> "Detruit" AND id_auteur IN (?) ', [$recherche]);
         }
         elseif ($recherche == 'bon' || $recherche == "tres bon" || $recherche == 'moyen' || $recherche == 'mauvais') 
         {
-            return  DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn  FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND integrite_du_livre IN (?) ', [$recherche]); 
+            return  DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn  FROM livredispo WHERE integrite_du_livre <> "Detruit" AND integrite_du_livre IN (?) ', [$recherche]); 
         }
         else 
         {      
-            return  DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn  FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND nom_genre IN (?) ', [$recherche]);      
+            return  DB::select('SELECT DISTINCT image, nombre_page, nom_genre, code_postal, ville, titre_livre, id_exemplaire, pseudo, isbn  FROM livredispo WHERE integrite_du_livre <> "Detruit" AND nom_genre IN (?) ', [$recherche]);      
         }
         
     }
@@ -86,18 +86,18 @@ class Livre extends Model
 
     public function loginRechercheLivre($ville)
     {
-        return DB::select('SELECT DISTINCT image FROM livreDispo WHERE integrite_du_livre <> "Detruit" AND ville = (?)', [$ville]); 
+        return DB::select('SELECT DISTINCT image FROM livredispo WHERE integrite_du_livre <> "Detruit" AND ville = (?)', [$ville]); 
     }
 
     public function detailLivre($idExemplaire, $pseudo)
     {
         
-        return DB::select('SELECT * FROM detailLivre WHERE id_exemplaire =(?) AND pseudo = (?)', [$idExemplaire, $pseudo]);
+        return DB::select('SELECT * FROM detaillivre WHERE id_exemplaire =(?) AND pseudo = (?)', [$idExemplaire, $pseudo]);
     }
 
     public function detailAllBooks()
     {
-        return DB::select('SELECT * FROM detailLivre');
+        return DB::select('SELECT * FROM detaillivre');
     }
 
 

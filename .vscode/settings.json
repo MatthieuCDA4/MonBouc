@@ -3,13 +3,10 @@
         {
             "format": "compressed",
             "extensionName": ".min.css",
-            "savePath": "/public/assets/css/"
+            "savePath": "/public/assets/css"
         }
     ],
 
     "liveSassCompile.settings.generateMap": true,
-    "liveSassCompile.settings.autoprefix": [
-        "> 1%",
-        "last 2 versions"
-    ]
+    "liveSassCompile.settings.autoprefix": null
 }

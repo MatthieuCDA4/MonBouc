@@ -70,7 +70,7 @@ html {
     flex-direction: row;
 
 }
- .lienPage a
+.lienPage a
 {   
     text-decoration: none;
     color: var(--a--color--wrapperheader);
@@ -665,10 +665,8 @@ form p
 
 /*#region resposive*/
 @media screen and (max-width: 1360px)
-
-{
-    
-    .href
+{  
+    .lienPage
     {
         display: flex;
         flex-direction: column;
@@ -676,17 +674,12 @@ form p
     }
 
     #wrapperMain
-        {
-            grid-template-columns: 1fr 1fr;
-
-        }
-
-
-
+    {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media screen and (max-width: 762px)
-
 {
     .wrapperHeader
     {
@@ -730,8 +723,6 @@ form p
     {
         grid-template-columns: none;
     }
-
-
 }
 
 @media screen and (max-width: 376px) 
@@ -763,16 +754,13 @@ form p
 
     #detailBox 
     {
-
         grid-template-columns: none;
         grid-template-rows: none;
-  
     }
 
     .empruntPasJeton img
     {
         width: 360px;
     }
-
 }
 /*#endregion responsive*/

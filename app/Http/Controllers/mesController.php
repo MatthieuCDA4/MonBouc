@@ -217,7 +217,7 @@ class MesController extends Controller
         $depot = $db->activiteDepotUsers();
         $livrePosseder = $db2->livreUsers();
         
-        return view('Activiter')->with('title', $titre)
+        return view('activiter')->with('title', $titre)
                                 ->with('emprunt', $emprunt)
                                 ->with('depot', $depot)
                                 ->with('livre', $livrePosseder);
@@ -234,7 +234,7 @@ class MesController extends Controller
         $emprunt = $db->activiteEmpruntUsers();
         $depot = $db->activiteDepotUsers();
         $livrePosseder = $db2->livreUsers();
-        return view('Activiter')->with('title', $titre)
+        return view('activiter')->with('title', $titre)
                                 ->with('emprunt', $emprunt)
                                 ->with('depot', $depot)
                                 ->with('livre', $livrePosseder);
