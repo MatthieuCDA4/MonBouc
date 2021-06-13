@@ -594,7 +594,7 @@ form p {
     }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 380px) {
     .wrapperHeader .four #description {
         width: 280px;
         height: 50%;
@@ -622,6 +622,25 @@ form p {
 
     .empruntPasJeton img {
         width: 360px;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .fondBoxLivre {
+        position: none;
+        height: 100%;
+        width: none;
+        bottom: none;
+        left: none;
+        background-color: none;
+    }
+    .piedPage ul li {
+        display: flex;
+        flex-direction: column;
+        height: none;
+        justify-content: center;
+        margin: 1%;
+        width: 230px;
     }
 }
 /*#endregion responsive*/
