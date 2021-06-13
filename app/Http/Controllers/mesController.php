@@ -205,7 +205,7 @@ class MesController extends Controller
     public function pageConstruction()
     {
         $titre = 'Travaux';
-        return view('PartiePasFini')->with('title', $titre);
+        return view('partiePasFini')->with('title', $titre);
     }
 
     public function Activite()
@@ -225,7 +225,6 @@ class MesController extends Controller
 
     public function deposerLivre(request $request)
     {
-        // dd($request);
         $titre = 'Activité';
         $db = new Activite();
         $db2 = new livre();

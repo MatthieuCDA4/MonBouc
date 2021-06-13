@@ -46,14 +46,13 @@
                             <button type="submit">
                             {{ __('Se connecter') }}
                             </button>
-                        </div>
-                    </form>
-
-                    <form action=" {{ route('register') }} " method="GET" id="inscription">
-                        @csrf
-                        <div  class="boutonInscriptionLogin" class="rowFormLogin">
-                            <input class="bouton" type="submit" value="S'inscrire">
-                        </div>
+                        </div> 
+                        
+                        <a href=" {{ route('register') }} " id="inscription">
+                            <div  class="boutonInscriptionLogin" class="rowFormLogin">
+                                <input class="bouton" type="submit" value="S'inscrire">
+                            </div>
+                        </a>
                     </form>
                 </main>
             </div>
